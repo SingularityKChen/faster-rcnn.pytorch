@@ -145,6 +145,12 @@ Compile the cuda dependencies using following simple commands:
 ```
 cd lib
 python setup.py build develop
+cd ../data
+# also  install the CoCO API 
+# https://github.com/jwyang/faster-rcnn.pytorch/issues/410
+git clone https://github.com/pdollar/coco.git
+cd coco/PythonAPI
+make
 ```
 
 It will compile all the modules you need, including NMS, ROI_Pooing, ROI_Align and ROI_Crop. The default version is compiled with Python 2.7, please compile by yourself if you are using a different python version.
